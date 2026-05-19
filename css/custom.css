@@ -284,3 +284,43 @@ input[type="email"]{
   gap: 15px;
   z-index: 999;
 }
+/* Mobile Responsive */
+@media (max-width: 768px) {
+
+  body{
+    overflow-x: hidden;
+  }
+
+  .container{
+    width: 100%;
+    padding: 10px;
+  }
+
+  .hero{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+
+  .navbar{
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .content{
+    width: 100%;
+  }
+
+  h1{
+    font-size: 28px;
+  }
+
+  p{
+    font-size: 16px;
+  }
+
+}
