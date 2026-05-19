@@ -249,7 +249,7 @@ input, textarea {
 /* Social icon right side move */
 .social-icons{
     position: absolute;
-    bottom: -1750px;
+    bottom: px;
     right: 15px;   /* increase/decrease for more right */
     display: flex;
     gap: 15px;
