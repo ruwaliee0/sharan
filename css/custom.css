@@ -26,8 +26,8 @@ HEADER
 HOME
 ========================= */
 #home{
-    width:75%;
-    min-height:75vh;
+    width:100%;
+    min-height:55vh;
     position:relative;
 }
 
