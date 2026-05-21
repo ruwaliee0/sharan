@@ -214,3 +214,46 @@ footer p {
       font-size: 0.7rem;
   }
 }
+/* =========================================
+   ✅ MOBILE वा LAPTOP — सबैमा Horizontal Navbar
+========================================= */
+.nav-logo {
+  width: 30px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.nav-brand-text {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.custom-nav-link {
+  font-size: 1.1rem;
+  padding: 0.5rem 0.6rem !important;
+  white-space: nowrap; /* एकै लाइनमा रहोस् */
+  transition: color 0.2s ease;
+}
+
+.custom-nav-link:hover {
+  color: #0d6efd !important; /* Bootstrap Primary Color */
+}
+
+/* ===== मोबाइलमा (जब Screen सानो हुन्छ) ===== */
+@media (max-width: 575px) {
+  .nav-logo {
+    width: 22px;
+    height: 18px;
+  }
+  .nav-brand-text {
+    font-size: 1.2rem;
+  }
+  .custom-nav-link {
+    font-size: 0.78rem !important;
+    padding: 0.25rem 0.35rem !important;
+  }
+  .navbar .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
