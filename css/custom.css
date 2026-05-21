@@ -336,3 +336,474 @@ footer p {
     padding: 0.2rem 0.4rem !important;
   }
 }
+/* =========================================
+   MODERN RESUME DESIGN WITH SIDEBAR
+========================================= */
+
+.modern-resume {
+  background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 50%, #0d0d1a 100%);
+  padding: 100px 30px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.resume-inner {
+  display: flex;
+  max-width: 1300px;
+  width: 100%;
+  gap: 30px;
+  align-items: stretch;
+}
+
+/* ========== SIDEBAR MENU ========== */
+.sidebar-menu {
+  width: 110px;
+  background: linear-gradient(180deg, #d946a6 0%, #a21d63 50%, #8b1a51 100%);
+  border-radius: 20px;
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  box-shadow: 0 15px 40px rgba(217, 70, 166, 0.3);
+  position: sticky;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sidebar-items {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+
+.sidebar-btn {
+  width: 55px;
+  height: 55px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: pointer;
+  border: 2px solid transparent;
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+}
+
+.sidebar-btn:hover,
+.sidebar-btn.active {
+  background: #fff;
+  color: #d946a6;
+  transform: scale(1.15) rotate(5deg);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.4);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* ========== MAIN RESUME CONTAINER ========== */
+.resume-main {
+  display: flex;
+  background: #1a1a2e;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  flex: 1;
+  min-height: 600px;
+}
+
+/* ========== LEFT: PROFILE IMAGE SECTION ========== */
+.profile-image-section {
+  width: 40%;
+  position: relative;
+  overflow: hidden;
+  background: #000;
+}
+
+.profile-img-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.profile-img-wrapper:hover .profile-img {
+  transform: scale(1.08);
+}
+
+/* GRADIENT OVERLAY */
+.profile-gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(217, 70, 166, 0.85) 0%,
+    rgba(162, 29, 99, 0.7) 40%,
+    transparent 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 50px 35px;
+  color: #fff;
+}
+
+.profile-fullname {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin: 0 0 10px 0;
+  text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.5);
+  letter-spacing: -1px;
+}
+
+.profile-designation {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.95;
+  margin-bottom: 25px;
+  display: block;
+}
+
+.profile-social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: auto;
+}
+
+.profile-social-links a {
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+}
+
+.profile-social-links a:hover {
+  background: #fff;
+  color: #d946a6;
+  transform: translateY(-8px) rotate(-10deg);
+  border-color: #fff;
+  box-shadow: 0 12px 30px rgba(255, 255, 255, 0.3);
+}
+
+/* ========== RIGHT: TEXT CONTENT SECTION ========== */
+.resume-text-section {
+  width: 60%;
+  padding: 70px 55px;
+  color: #ccc;
+  overflow-y: auto;
+  max-height: 100%;
+}
+
+.resume-main-title {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin: 0 0 15px 0;
+  text-transform: lowercase;
+  letter-spacing: -1.5px;
+}
+
+.resume-meta-info {
+  color: #d946a6;
+  font-size: 0.9rem;
+  margin-bottom: 35px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.resume-meta-info span {
+  margin: 0 8px;
+}
+
+.resume-description {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.85;
+  font-size: 0.95rem;
+  color: #999;
+  margin-bottom: 50px;
+  font-weight: 400;
+}
+
+.resume-services-heading {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 35px;
+  text-transform: lowercase;
+  letter-spacing: -0.5px;
+}
+
+/* ========== SERVICES GRID ========== */
+.services-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.service-box {
+  padding: 30px;
+  background: rgba(217, 70, 166, 0.08);
+  border: 1px solid rgba(217, 70, 166, 0.15);
+  border-radius: 15px;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: pointer;
+}
+
+.service-box:hover {
+  background: rgba(217, 70, 166, 0.18);
+  border-color: #d946a6;
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(217, 70, 166, 0.2);
+}
+
+.service-box-icon {
+  font-size: 2.5rem;
+  color: #d946a6;
+  margin-bottom: 20px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.service-box:hover .service-box-icon {
+  transform: scale(1.15) rotate(10deg);
+}
+
+.service-box-title {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  text-transform: capitalize;
+}
+
+.service-box-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.65;
+  color: #999;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 1200px) {
+  .resume-text-section {
+    padding: 50px 40px;
+  }
+
+  .resume-main-title {
+    font-size: 3rem;
+  }
+
+  .profile-fullname {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .resume-inner {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .sidebar-menu {
+    width: 100%;
+    padding: 20px;
+    border-radius: 15px;
+    height: auto;
+    position: static;
+    transform: none;
+  }
+
+  .sidebar-items {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .sidebar-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+
+  .resume-main {
+    flex-direction: column;
+    min-height: auto;
+    border-radius: 15px;
+  }
+
+  .profile-image-section {
+    width: 100%;
+    height: 400px;
+  }
+
+  .resume-text-section {
+    width: 100%;
+    padding: 40px 35px;
+    overflow-y: visible;
+  }
+
+  .resume-main-title {
+    font-size: 2.5rem;
+  }
+
+  .services-container {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .modern-resume {
+    padding: 60px 20px;
+  }
+
+  .resume-inner {
+    gap: 15px;
+  }
+
+  .resume-text-section {
+    padding: 30px 25px;
+  }
+
+  .resume-main-title {
+    font-size: 2rem;
+  }
+
+  .resume-services-heading {
+    font-size: 1.6rem;
+  }
+
+  .services-container {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .service-box {
+    padding: 25px;
+  }
+
+  .profile-fullname {
+    font-size: 2rem;
+  }
+
+  .profile-designation {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .modern-resume {
+    padding: 40px 15px;
+  }
+
+  .sidebar-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 1rem;
+  }
+
+  .profile-image-section {
+    height: 350px;
+  }
+
+  .profile-gradient-overlay {
+    padding: 35px 25px;
+  }
+
+  .profile-fullname {
+    font-size: 1.7rem;
+    margin-bottom: 8px;
+  }
+
+  .profile-designation {
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+  }
+
+  .profile-social-links {
+    gap: 12px;
+  }
+
+  .profile-social-links a {
+    width: 38px;
+    height: 38px;
+    font-size: 0.95rem;
+  }
+
+  .resume-text-section {
+    padding: 25px 20px;
+  }
+
+  .resume-main-title {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+  }
+
+  .resume-meta-info {
+    font-size: 0.85rem;
+    margin-bottom: 25px;
+  }
+
+  .resume-description {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+  }
+
+  .resume-services-heading {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+
+  .service-box {
+    padding: 20px;
+  }
+
+  .service-box-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .service-box-title {
+    font-size: 1rem;
+  }
+
+  .service-box-text {
+    font-size: 0.8rem;
+  }
+}
