@@ -68,25 +68,6 @@ html, body {
   text-decoration: none;
 }
 
-/* ===== RESUME ===== */
-#resume {
-  padding: 4rem 0;
-}
-
-#resume .card {
-  margin: 0 auto;
-  max-width: 100%;
-}
-#resume .card img {
-  height: 120px;
-  object-fit: cover;
-}
-
-.title {
-  font-size: clamp(1.4rem, 3vw, 2rem);
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
 
 /* ===== PORTFOLIO ===== */
 #portfolio {
