@@ -354,7 +354,7 @@ footer p {
 /* ========== SIDEBAR ========== */
 .portfolio-sidebar {
   width: 100px;
-  background: linear-gradient(180deg, #d946a6 0%, #a21d63 50%, #8b1a51 100%);
+  background: linear-gradient(180deg, #19082f 0%, #4e396d 50%, #1a8124 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -390,7 +390,7 @@ footer p {
 
 .sidebar-icon-btn:hover {
   background: #fff;
-  color: #d946a6;
+  color: #1125a7;
   transform: scale(1.15) rotate(10deg);
   box-shadow: 0 10px 30px rgba(255, 255, 255, 0.4);
   border-color: #fff;
@@ -444,8 +444,8 @@ footer p {
   height: 100%;
   background: linear-gradient(
     135deg,
-    rgba(217, 70, 166, 0.8) 0%,
-    rgba(162, 29, 99, 0.6) 40%,
+    rgba(141, 32, 103, 0.8) 0%,
+    rgba(54, 11, 106, 0.6) 40%,
     transparent 100%
   );
   display: flex;
@@ -498,9 +498,9 @@ footer p {
 
 .social-icon:hover {
   background: #fff;
-  color: #d946a6;
+  color: #322f30;
   transform: translateY(-8px) rotate(-10deg);
-  box-shadow: 0 12px 30px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 12px 30px rgba(69, 55, 55, 0.3);
   border-color: #fff;
 }
 
@@ -523,12 +523,12 @@ footer p {
 }
 
 .portfolio-right::-webkit-scrollbar-thumb {
-  background: #d946a6;
+  background: #2f0ca3;
   border-radius: 10px;
 }
 
 .portfolio-right::-webkit-scrollbar-thumb:hover {
-  background: #e85fa0;
+  background: #926e45;
 }
 
 .content-block {
@@ -546,7 +546,7 @@ footer p {
 }
 
 .meta-info {
-  color: #d946a6;
+  color: #ae779b;
   font-size: 0.9rem;
   margin-bottom: 25px;
   font-weight: 500;
@@ -586,14 +586,14 @@ footer p {
 
 .service-item:hover {
   background: rgba(217, 70, 166, 0.15);
-  border-color: #d946a6;
+  border-color: #09244b;
   transform: translateY(-10px);
   box-shadow: 0 20px 50px rgba(217, 70, 166, 0.2);
 }
 
 .service-icon {
   font-size: 2.8rem;
-  color: #d946a6;
+  color: #737671;
   margin-bottom: 20px;
   display: inline-block;
   transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -605,7 +605,7 @@ footer p {
 
 .service-name {
   font-family: 'Poppins', sans-serif;
-  color: #fff;
+  color: #ab2f2f;
   font-size: 1.1rem;
   font-weight: 700;
   margin: 0 0 12px 0;
