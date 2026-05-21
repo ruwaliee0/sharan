@@ -336,3 +336,188 @@ footer p {
     padding: 0.2rem 0.4rem !important;
   }
 }
+/* =========================================
+   MODERN OVERLAP VCARD (Pure CSS)
+========================================= */
+.cv-section {
+  padding: 100px 20px;
+  background-color: #0d0d0d; /* पेजको पछाडिको रङ, यदि तपाईंको अर्कै छ भने हटाउनुहोला */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cv-container {
+  display: flex;
+  max-width: 1000px;
+  width: 100%;
+  margin: 40px auto;
+  position: relative;
+}
+
+/* --- Left Profile (Overlap Effect) --- */
+.cv-profile {
+  width: 38%;
+  position: relative;
+  transform: scaleY(1.1); /* फोटोलाई अलि अग्लो (overlap) बनाउँछ */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.6);
+  z-index: 2; /* Content भन्दा माथि ल्याउन */
+  background: #222;
+}
+
+.cv-profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cv-profile-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 20px 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 50%, transparent 100%);
+  text-align: center;
+  color: #fff;
+}
+
+.cv-profile-info h2 {
+  font-family: 'Arvo', serif;
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.cv-job-title {
+  color: #c74385; /* फोटोको जस्तै गुलाबी/बैजनी रङ */
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.cv-socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.cv-socials a {
+  color: #fff;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.cv-socials a:hover {
+  color: #c74385;
+}
+
+/* --- Right Content Box --- */
+.cv-content {
+  width: 65%;
+  background: #1a1a1c; /* गाढा कालो/खैरो */
+  padding: 60px 50px 60px 80px; /* देब्रेपट्टि धेरै padding (overlap मिलाउन) */
+  margin-left: -40px; /* Profile भन्दा अलिकति भित्र छिराउन */
+  border-radius: 12px;
+  color: #999;
+  z-index: 1;
+}
+
+.cv-title {
+  color: #fff;
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  text-transform: lowercase; /* "about me" जस्तै बनाउन */
+}
+
+.cv-meta {
+  color: #c74385;
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-bottom: 25px;
+}
+
+.cv-desc {
+  line-height: 1.8;
+  font-size: 0.95rem;
+  margin-bottom: 40px;
+}
+
+.cv-subtitle {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-transform: lowercase;
+}
+
+/* --- Services Grid --- */
+.cv-services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.cv-service-item {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cv-service-item i {
+  color: #c74385;
+  font-size: 1.8rem;
+}
+
+.cv-service-item h3 {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-transform: lowercase;
+}
+
+.cv-service-item p {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+========================================= */
+@media (max-width: 991px) {
+  .cv-container {
+    flex-direction: column;
+    margin: 0;
+  }
+  
+  .cv-profile {
+    width: 100%;
+    transform: scaleY(1); /* मोबाइलमा Overlap बन्द गर्ने */
+    border-radius: 12px 12px 0 0;
+    box-shadow: none;
+    height: 450px; /* मोबाइलमा फोटोको उचाइ */
+  }
+
+  .cv-content {
+    width: 100%;
+    margin-left: 0;
+    padding: 40px 25px;
+    border-radius: 0 0 12px 12px;
+  }
+}
+
+@media (max-width: 575px) {
+  .cv-services-grid {
+    grid-template-columns: 1fr; /* मोबाइलमा एउटा मात्र लाइनमा आउने */
+  }
+  .cv-title { font-size: 2.2rem; }
+  .cv-subtitle { font-size: 1.6rem; }
+}
