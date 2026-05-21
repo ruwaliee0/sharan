@@ -257,22 +257,25 @@
       </div>
       <div class="row justify-content-center">
         <div class="col-md-8">
-          <form action="https://formspree.io/f/mqejkwwa" method="POST">
-            <div class="mb-3">
-              <input type="text" name="name" class="form-control" placeholder="Enter your Name..." required>
-            </div>
-            <div class="mb-3">
-              <input type="email" name="email" class="form-control" placeholder="Enter your Email..." required>
-            </div>
-            <div class="mb-3">
-              <textarea class="form-control" name="message" rows="4" placeholder="Enter your Message..." required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary w-100">Submit</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
+       <form action="https://formspree.io/f/mqejkwwa" method="POST">
+  <!-- Hidden Fields (Required for Formspree) -->
+  <input type="hidden" name="_subject" value="New Message from Portfolio!" />
+  <input type="hidden" name="_next" value="https://harisharanruwali.com.np/" />
+  <input type="hidden" name="_cc" value="mailme.sharanruwali01@gmail.com" />
+
+  <!-- User Fields -->
+  <div class="mb-3">
+    <input type="text" name="name" class="form-control" placeholder="Enter your Name..." required>
+  </div>
+  <div class="mb-3">
+    <input type="email" name="email" class="form-control" placeholder="Enter your Email..." required>
+  </div>
+  <div class="mb-3">
+    <textarea class="form-control" name="message" rows="4" placeholder="Enter your Message..." required></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary w-100">Submit</button>
+</form>
+
 
   <!-- ===== FOOTER ===== -->
   <footer class="py-4">
