@@ -184,6 +184,232 @@ html, body {
 @media (max-width: 768px) {
     .section-title { font-size: 2.8rem; }
 }
+#resume {
+    padding: 80px 0;
+    background: #fff;
+}
+
+#resume .title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 30px;
+}
+
+/* ===== BOOST TRAP CARD ANIMATION ===== */
+
+.boost-trap-card {
+    position: relative;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Background Layer with Animation */
+.card-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 0;
+}
+
+/* Content Layer */
+.card-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid #f0f0f0;
+    border-radius: 20px;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1;
+}
+
+/* Icon Container */
+.icon-container {
+    width: 80px;
+    height: 80px;
+    background: #f3f4f6;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: #6366f1;
+    margin-bottom: 20px;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    z-index: 2;
+}
+
+.icon-container.python {
+    color: #3776ab;
+}
+
+.icon-container.js {
+    color: #f7df1e;
+}
+
+.icon-container.web {
+    color: #ff6b6b;
+}
+
+/* Title */
+.card-content h5 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    transition: all 0.5s ease;
+    position: relative;
+    z-index: 2;
+}
+
+/* Description */
+.card-content p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    transition: all 0.5s ease;
+    position: relative;
+    z-index: 2;
+}
+
+/* Footer Badge */
+.card-footer {
+    position: relative;
+    z-index: 2;
+}
+
+.badge {
+    display: inline-block;
+    background: #f3f4f6;
+    color: #6366f1;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.5s ease;
+}
+
+/* ===== HOVER ANIMATION (The Boost Trap Effect) ===== */
+
+.boost-trap-card:hover {
+    transform: scale(1.05) rotateY(5deg);
+}
+
+.boost-trap-card:hover .card-background {
+    opacity: 1;
+    animation: boostTrap 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.boost-trap-card:hover .card-content {
+    color: #fff;
+    border-color: transparent;
+    transform: scale(0.95);
+}
+
+.boost-trap-card:hover .icon-container {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transform: scale(1.2) rotateZ(10deg);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+}
+
+.boost-trap-card:hover h5 {
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+.boost-trap-card:hover p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.boost-trap-card:hover .badge {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transform: translateY(5px);
+}
+
+/* ===== BOOST TRAP ANIMATION KEYFRAMES ===== */
+
+@keyframes boostTrap {
+    0% {
+        opacity: 0;
+        clip-path: polygon(
+            0% 0%, 0% 0%, 0% 0%,
+            100% 0%, 100% 0%, 100% 0%,
+            100% 100%, 100% 100%,
+            0% 100%, 0% 100%
+        );
+    }
+    25% {
+        clip-path: polygon(
+            0% 0%, 25% 0%, 50% 0%,
+            100% 0%, 100% 25%, 100% 50%,
+            100% 100%, 75% 100%,
+            50% 100%, 0% 100%
+        );
+    }
+    50% {
+        clip-path: polygon(
+            0% 0%, 50% 0%, 100% 0%,
+            100% 0%, 100% 50%, 100% 100%,
+            100% 100%, 50% 100%,
+            0% 100%, 0% 50%
+        );
+    }
+    75% {
+        clip-path: polygon(
+            0% 0%, 100% 0%, 100% 0%,
+            100% 25%, 100% 75%, 100% 100%,
+            75% 100%, 25% 100%,
+            0% 75%, 0% 25%
+        );
+    }
+    100% {
+        opacity: 1;
+        clip-path: polygon(
+            0% 0%, 100% 0%, 100% 0%,
+            100% 0%, 100% 100%, 100% 100%,
+            100% 100%, 0% 100%,
+            0% 100%, 0% 0%
+        );
+    }
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+    #resume .title {
+        font-size: 2rem;
+    }
+    
+    .boost-trap-card {
+        height: 350px;
+    }
+    
+    .card-content {
+        padding: 25px 20px;
+    }
+}
 
 
 /* ===== PORTFOLIO ===== */
