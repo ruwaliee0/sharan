@@ -1,383 +1,88 @@
-@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap');
-
 /* =========================
-COMMON CSS
+RESUME / CARD SECTION FIX
 ========================= */
-html,
-body{
-    margin:0;
-    padding:0;
-    font-family:"Arvo", serif;
-    overflow-x:hidden;
+#resume {
+    width: 100%;
+    padding: 4rem 0;
 }
 
-/* =========================
-HEADER
-========================= */
-.navbar-brand{
-    font-size:1.5rem;
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 15px;
 }
 
-.nav-link{
-    font-size:1.1rem;
+/* Desktop & Laptop मा कार्डको साइज */
+.card {
+    flex: 0 1 calc(25% - 20px); /* ४ वटा कार्ड एक लाइनमा */
+    min-width: 250px; /* धेरै सानो हुन नदिन */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: 0.3s;
 }
 
-/* =========================
-HOME
-========================= */
-#home{
-    width:100%;
-    min-height:100vh;
-    position:relative;
+.card:hover {
+    transform: translateY(-5px);
 }
 
-#particles-js{
-    width:100%;
-    height:100%;
-    position:absolute;
-    background:#0f172a;
-    z-index:-1;
-}
-
-#name{
-    padding-top:14rem;
-    font-size:4rem;
-    color:#fff;
-    text-align:center;
-}
-
-#tagline{
-    margin-top:1rem;
-    font-size:2rem;
-    color:#fff;
-    text-align:center;
-}
-
-#learn-more{
-    padding:.5rem 1rem;
-    width:180px;
-    margin:2rem auto;
-    display:block;
-    border:2px solid #fff;
-    border-radius:1rem;
-    text-decoration:none;
-    text-align:center;
-    color:#fff;
+.card img {
+    width: 100%;
+    height: 200px; /* Standard height */
+    object-fit: cover;
 }
 
 /* =========================
-RESUME
-========================= */
-#resume{
-    width:100%;
-    padding:4rem 0;
-}
-
-.card-container{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-}
-
-.card{
-    width:150px;
-    margin:10px;
-    border-radius:15px;
-    overflow:hidden;
-}
-
-.card img{
-    width:100%;
-    height:180px;
-    object-fit:cover;
-}
-
-/* =========================
-PORTFOLIO
-========================= */
-#portfolio{
-    width:100%;
-    padding:4rem 0;
-}
-
-#portfolio .row{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:20px;
-}
-
-#portfolio .grid{
-    position:relative;
-    width:100%;
-}
-
-#portfolio img{
-    width:100%;
-    height:200px;
-    object-fit:cover;
-    border-radius:10px;
-}
-
-#portfolio .overlay{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:#527cec;
-    opacity:0;
-    transition:.4s;
-    border-radius:10px;
-}
-
-#portfolio .grid:hover .overlay{
-    opacity:.8;
-}
-
-.txt{
-    color:#fff;
-    font-size:1.5rem;
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-}
-
-/* =========================
-IMAGE CONTAINER
-========================= */
-.image-container{
-    display:flex;
-    justify-content:center;
-    gap:40px;
-    flex-wrap:wrap;
-}
-
-.image-container img{
-    width:150px;
-    height:auto;
-}
-
-/* =========================
-CONTACT
-========================= */
-#contact{
-    width:100%;
-    padding:3rem 0;
-}
-
-form{
-    width:60%;
-    margin:auto;
-    text-align:center;
-}
-
-input,
-textarea{
-    width:100%;
-    margin-bottom:15px;
-    padding:12px;
-    border-radius:8px;
-    border:1px solid #ccc;
-}
-
-button{
-    margin-top:15px;
-}
-
-.submit-message{
-    background:#527cec;
-    color:#fff;
-}
-
-/* =========================
-FOOTER
-========================= */
-footer{
-    width:100%;
-    padding:2rem 0;
-}
-
-/* =========================
-SOCIAL ICONS
-========================= */
-.social-icons{
-    display:flex;
-    gap:15px;
-}
-
-.social-icons a{
-    font-size:35px;
-    color:#811c4a;
-    transition:.3s;
-}
-
-.social-icons a:hover{
-    color:#0077ff;
-    transform:scale(1.2);
-}
-
-/* =========================
-FIXED CONTACT
-========================= */
-.fixed-contact{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-    z-index:999;
-}
-
-/* =========================
-BOOTSTRAP CARD FIX
-========================= */
-.cards-wrapper{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:15px;
-}
-
-/* =========================
-MOBILE RESPONSIVE
-========================= */
-@media(max-width:768px){
-
-    /* navbar */
-    .navbar-brand{
-        font-size:1.2rem;
-    }
-
-    .nav-link{
-        font-size:1rem;
-        text-align:center;
-    }
-
-    /* home */
-    #name{
-        padding-top:10rem;
-        font-size:2rem;
-    }
-
-    #tagline{
-        font-size:1rem;
-        padding:0 10px;
-    }
-
-    #learn-more{
-        width:140px;
-        font-size:.9rem;
-    }
-
-    /* cards */
-    .card-container{
-        flex-wrap:nowrap;
-        gap:8px;
-        overflow-x:auto;
-        padding:10px;
-    }
-
-    .card{
-        width:32%;
-        min-width:32%;
-        margin:0;
-    }
-
-    .card img{
-        height:90px;
-    }
-
-    .card-body{
-        padding:8px;
-    }
-
-    .card-title{
-        font-size:12px;
-    }
-
-    .card-text{
-        font-size:10px;
-    }
-
-    /* portfolio */
-    #portfolio img{
-        height:120px;
-    }
-
-    .txt{
-        font-size:1rem;
-    }
-
-    /* form */
-    form{
-        width:90%;
-    }
-
-    /* image */
-    .image-container{
-        gap:15px;
-    }
-
-    .image-container img{
-        width:90px;
-    }
-
-    /* social */
-    .social-icons a{
-        font-size:25px;
-    }
-
-    .fixed-contact{
-        right:10px;
-        bottom:10px;
-    }
-
-}
-/* =========================
-MOBILE CARD FIX
+MOBILE & TABLET RESPONSIVE
 ========================= */
 
-@media(max-width:768px){
+/* Tablet (max-width: 992px) */
+@media (max-width: 992px) {
+    .card {
+        flex: 0 1 calc(50% - 20px); /* २ वटा कार्ड एक लाइनमा */
+    }
+}
 
-    .card-container{
-        display:flex;
-        flex-wrap:nowrap;
-        justify-content:space-between;
-        gap:6px;
-        padding:5px;
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+    #name {
+        padding-top: 10rem;
+        font-size: 2.5rem;
     }
 
-    .card-container .card{
-        width:25%;
-        min-width:25%;
-        margin:0;
+    #tagline {
+        font-size: 1.2rem;
     }
 
-    .card-container .card img{
-        height:25px;
-        object-fit:cover;
+    /* मोबाइलमा कार्ड १ वटा मात्र देखिने (Full Width) */
+    .card {
+        flex: 0 1 100%;
+        min-width: 100%;
+        margin: 10px 0;
     }
 
-    .card-container .card-body{
-        padding:6px;
+    .card img {
+        height: 180px; /* मोबाइलमा इमेज अलि ठुलो देखियोस् */
     }
 
-    .card-container .card-title{
-        font-size:11px;
-        line-height:10px;
+    .card-body {
+        padding: 15px;
     }
 
-    .card-container .card-text{
-        font-size:9px;
-        line-height:10px;
+    /* Form चौडाई बढाउने */
+    form {
+        width: 90%;
     }
+}
 
-    .card-container .btn{
-        font-size:9px;
-        padding:4px 6px;
+/* सानो मोबाइल (max-width: 480px) */
+@media (max-width: 480px) {
+    .card-title {
+        font-size: 1.1rem;
     }
-
+    .card-text {
+        font-size: 0.9rem;
+    }
 }
