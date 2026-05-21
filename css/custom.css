@@ -336,3 +336,48 @@ MOBILE RESPONSIVE
     }
 
 }
+/* =========================
+MOBILE CARD FIX
+========================= */
+
+@media(max-width:768px){
+
+    .card-container{
+        display:flex;
+        flex-wrap:nowrap;
+        justify-content:space-between;
+        gap:6px;
+        padding:5px;
+    }
+
+    .card-container .card{
+        width:32%;
+        min-width:32%;
+        margin:0;
+    }
+
+    .card-container .card img{
+        height:70px;
+        object-fit:cover;
+    }
+
+    .card-container .card-body{
+        padding:6px;
+    }
+
+    .card-container .card-title{
+        font-size:11px;
+        line-height:15px;
+    }
+
+    .card-container .card-text{
+        font-size:9px;
+        line-height:14px;
+    }
+
+    .card-container .btn{
+        font-size:9px;
+        padding:4px 6px;
+    }
+
+}
