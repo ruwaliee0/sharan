@@ -67,26 +67,123 @@ html, body {
   color: #0f172a;
   text-decoration: none;
 }
+/* ===== MINIMAL RESUME STYLING ===== */
 
-/* ===== RESUME ===== */
-#resume {
-  padding: 4rem 0;
-}
-
-#resume .card {
-  margin: 0 auto;
-  max-width: 100%;
-}
-#resume .card img {
-  height: 120px;
-  object-fit: cover;
+#resume-section {
+    background-color: #ffffff; /* White background matching your site */
+    font-family: 'Poppins', sans-serif; /* Use your site's default font */
+    color: #333;
 }
 
-.title {
-  font-size: clamp(1.4rem, 3vw, 2rem);
-  font-weight: 700;
-  margin-bottom: 1rem;
+/* Big, Bold, Lowercase Title like "about me" */
+.section-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #1a1a1a;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
 }
+
+.column-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 25px;
+    text-transform: lowercase; /* Matching the theme */
+    letter-spacing: -0.5px;
+}
+
+/* Soft Gray Cards like "my ervices" */
+.minimal-card {
+    background-color: #f3f4f6; /* Soft light gray */
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 20px;
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.minimal-card:hover {
+    transform: translateY(-5px);
+}
+
+.date-badge {
+    display: inline-block;
+    background-color: #e5e7eb;
+    color: #555;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.item-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.item-text {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Skills Section */
+.skill-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 12px;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tags span {
+    background-color: #fff;
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+/* Gradient Card matching your left profile picture */
+.gradient-promo-card {
+    background: linear-gradient(135deg, #a770ef 0%, #cf8bf3 50%, #fdb99b 100%); /* Matching Purple/Pink Gradient */
+    border-radius: 16px;
+    padding: 35px 30px;
+    color: #fff;
+    text-align: left;
+}
+
+.gradient-promo-card h3 {
+    font-weight: 800;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.gradient-promo-card p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .section-title { font-size: 2.8rem; }
+}
+
 
 /* ===== PORTFOLIO ===== */
 #portfolio {
