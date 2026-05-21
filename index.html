@@ -15,21 +15,22 @@
 </head>
 <body>
 
-  <!-- ===== NAVIGATION ===== -->
+    <!-- ===== NAVIGATION ===== -->
   <header>
-    <!-- ✅ navbar-expand-lg हटाएर 'navbar-expand' मात्र राखियो — कहिल्यै collapse हुँदैन -->
-    <nav class="navbar navbar-expand bg-body-tertiary fixed-top py-3 shadow-sm">
-      <div class="container d-flex justify-content-between align-items-center">
+    <nav class="navbar navbar-expand bg-body-tertiary fixed-top py-2 shadow-sm">
+      <!-- ✅ मोबाइलमा flex-column ले माथि-तल बनाउँछ, ल्यापटपमा flex-sm-row ले सिधा बनाउँछ -->
+      <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
         
-        <!-- Logo -->
+        <!-- Logo (माथि) -->
         <a class="navbar-brand d-flex align-items-center gap-2 m-0" href="#home">
-          <img src="img/ChatGPT Image May 5, 2026, 11_30_15 PM.png" alt="Logo" class="nav-logo" width="30" height="24">
+          <img src="img/ChatGPT Image May 5, 2026, 11_30_15 PM.png" alt="Logo" class="nav-logo">
           <span class="nav-brand-text fw-bold">Sharan</span>
         </a>
         
-        <!-- ✅ Menu Items — सधैं horizontal रहन्छन् -->
+        <!-- Menu Items (तल) -->
         <div>
-          <ul class="navbar-nav flex-row gap-2 gap-md-4 mb-0">
+          <!-- ✅ justify-content-center ले गर्दा मोबाइलमा बीचमा चिटिक्क परेर बस्छ -->
+          <ul class="navbar-nav flex-row gap-3 mb-0 justify-content-center">
             <li class="nav-item">
               <a class="nav-link custom-nav-link active" href="#home">Home</a>
             </li>
