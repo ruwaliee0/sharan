@@ -444,7 +444,7 @@ footer p {
   height: 100%;
   background: linear-gradient(
     135deg,
-    rgba(141, 32, 103, 0.8) 0%,
+    rgba(9, 9, 9, 0.8) 0%,
     rgba(54, 11, 106, 0.6) 40%,
     transparent 100%
   );
@@ -508,7 +508,7 @@ footer p {
 .portfolio-right {
   flex: 1;
   padding: 80px 60px;
-  color: #121212;
+  color: #141313;
   overflow-y: auto;
   max-height: 100vh;
 }
@@ -562,7 +562,7 @@ footer p {
   font-family: 'Poppins', sans-serif;
   line-height: 1.85;
   font-size: 0.95rem;
-  color: #411919;
+  color: #141414;
   margin: 0;
   font-weight: 400;
 }
