@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sharan Ruwali </title>
   <link rel="icon" type="image/png" href="img/ChatGPT Image May 5, 2026, 11_30_15 PM.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&display=swap" rel="stylesheet">
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -133,67 +136,140 @@
     </div>
   </section>
 
-  <!-- ===== PORTFOLIO SECTION ===== -->
-  <section id="portfolio">
-    <div class="container"> 
-      <div class="row">
-        <div class="col-12">
-          <h2 class="title text-center">What I am recently doing?</h2>
-        </div>
-      </div>
-      <!-- Cards Row -->
-      <div class="row g-3 justify-content-center mt-2">
+ <!-- MODERN PORTFOLIO SECTION -->
+<section id="portfolio" class="modern-portfolio-section">
+  
+  <!-- LEFT SIDEBAR WITH ICONS -->
+  <aside class="portfolio-sidebar">
+    <nav class="sidebar-nav">
+      <button class="sidebar-icon-btn" data-section="about" title="About">
+        <i class="fa-solid fa-user"></i>
+      </button>
+      <button class="sidebar-icon-btn" data-section="phone" title="Phone">
+        <i class="fa-solid fa-phone"></i>
+      </button>
+      <button class="sidebar-icon-btn" data-section="email" title="Email">
+        <i class="fa-solid fa-envelope"></i>
+      </button>
+      <button class="sidebar-icon-btn" data-section="work" title="Work">
+        <i class="fa-solid fa-briefcase"></i>
+      </button>
+      <button class="sidebar-icon-btn" data-section="skills" title="Skills">
+        <i class="fa-solid fa-code"></i>
+      </button>
+      <button class="sidebar-icon-btn" data-section="message" title="Message">
+        <i class="fa-solid fa-message"></i>
+      </button>
+    </nav>
+  </aside>
+
+  <!-- PROFILE IMAGE SECTION (LEFT) -->
+  <div class="portfolio-left">
+    <div class="profile-card">
+      <img src="img/profile.jpg" alt="Sharan Ruwali" class="profile-photo">
+      
+      <!-- OVERLAY TEXT -->
+      <div class="profile-overlay">
+        <h2 class="profile-name">Sharan Ruwali</h2>
+        <p class="profile-role">Developer</p>
         
-        <!-- Card 1 -->
-        <div class="col-6 col-md-6 col-lg-3">
-          <div class="card h-100 shadow-sm border-0">
-            <img src="img/meroo.png" class="card-img-top custom-card-img p-2" alt="Programming">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title fw-bold">Programming | Learner</h5>
-              <p class="card-text flex-grow-1 text-muted">I am a beginner programmer, learning step by step through regular practice, exploring new concepts.</p>
-              <a href="#" class="btn btn-primary mt-auto btn-sm">Go somewhere</a>
-            </div>
+        <!-- SOCIAL ICONS -->
+        <div class="social-icons-group">
+          <a href="https://facebook.com/ruwaliee0" target="_blank" class="social-icon">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="#" target="_blank" class="social-icon">
+            <i class="fa-brands fa-dribbble"></i>
+          </a>
+          <a href="#" target="_blank" class="social-icon">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="#" target="_blank" class="social-icon">
+            <i class="fa-brands fa-behance"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTENT SECTION (RIGHT) -->
+  <div class="portfolio-right">
+    
+    <!-- ABOUT ME SECTION -->
+    <div class="content-block about-block">
+      <h1 class="section-title">about me</h1>
+      
+      <p class="meta-info">
+        <span>Student</span> <span class="separator">/</span> 
+        <span>Kathmandu</span> <span class="separator">/</span> 
+        <span>Freelance</span>
+      </p>
+      
+      <p class="section-description">
+        I am a passionate web developer and beginner programmer dedicated to creating modern, responsive websites. 
+        With strong fundamentals in HTML, CSS, and JavaScript, I focus on building clean code and exceptional user experiences. 
+        Currently expanding my skills in Python and advanced JavaScript frameworks. Part-time construction work has taught me discipline, 
+        reliability, and the importance of attention to detail. Always eager to learn, collaborate, and contribute to innovative projects.
+      </p>
+    </div>
+
+    <!-- MY SERVICES SECTION -->
+    <div class="content-block services-block">
+      <h2 class="section-title">my services</h2>
+      
+      <div class="services-grid">
+        
+        <!-- Service 1 -->
+        <div class="service-item">
+          <div class="service-icon">
+            <i class="fa-solid fa-desktop"></i>
           </div>
+          <h3 class="service-name">development</h3>
+          <p class="service-desc">
+            Building responsive websites with HTML, CSS, JavaScript. Focus on modern design patterns and clean code.
+          </p>
         </div>
 
-        <!-- Card 2 -->
-        <div class="col-6 col-md-6 col-lg-3">
-          <div class="card h-100 shadow-sm border-0">
-            <img src="img/python 22.jpg" class="card-img-top custom-card-img p-2" alt="Python">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title fw-bold">Python | Learner</h5>
-              <p class="card-text flex-grow-1 text-muted">I am a beginner in Python programming. I am learning step by step and practicing coding.</p>
-              <a href="#" class="btn btn-primary mt-auto btn-sm">Go somewhere</a>
-            </div>
+        <!-- Service 2 -->
+        <div class="service-item">
+          <div class="service-icon">
+            <i class="fa-solid fa-rocket"></i>
           </div>
-        </div>
-        <!-- Card 3 -->
-        <div class="col-6 col-md-6 col-lg-3">
-          <div class="card h-100 shadow-sm border-0">
-            <img src="img/javaa" class="card-img-top custom-card-img p-2" alt="JavaScript">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title fw-bold">JavaScript | Learner</h5>
-              <p class="card-text flex-grow-1 text-muted">I am a beginner in JavaScript. Practicing coding, and building small projects.</p>
-              <a href="#" class="btn btn-primary mt-auto btn-sm">Go somewhere</a>
-            </div>
-          </div>
+          <h3 class="service-name">SEO optimization</h3>
+          <p class="service-desc">
+            Optimizing websites for search engines. Fast load times, meta tags, and semantic HTML.
+          </p>
         </div>
 
-        <!-- Card 4 (New Added) -->
-        <div class="col-6 col-md-6 col-lg-3">
-          <div class="card h-100 shadow-sm border-0">
-            <!-- तलको img src मा आफ्नो नयाँ फोटोको नाम राख्नुहोला -->
-            <img src="img/web developer.png" class="card-img-top custom-card-img p-2" alt="Web Design">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title fw-bold">Web Design | Learner</h5>
-              <p class="card-text flex-grow-1 text-muted">I am learning HTML, CSS, and Bootstrap to build responsive and beautiful websites.</p>
-              <a href="#" class="btn btn-primary mt-auto btn-sm">Go somewhere</a>
-            </div>
+        <!-- Service 3 -->
+        <div class="service-item">
+          <div class="service-icon">
+            <i class="fa-solid fa-database"></i>
           </div>
+          <h3 class="service-name">database</h3>
+          <p class="service-desc">
+            Learning backend development with Python. Database design and server-side logic implementation.
+          </p>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-item">
+          <div class="service-icon">
+            <i class="fa-solid fa-shield"></i>
+          </div>
+          <h3 class="service-name">data security</h3>
+          <p class="service-desc">
+            Implementing secure coding practices. Protecting user data with encryption and security standards.
+          </p>
         </div>
 
       </div>
+    </div>
+
+  </div>
+
 </section>
+
   <!-- ===== CONTACT SECTION ===== -->
   <section id="contact">
     <div class="container">
