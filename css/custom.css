@@ -537,7 +537,7 @@ footer p {
 
 .section-title {
   font-family: 'Poppins', sans-serif;
-  color: #fff;
+  color: #1e1d1d;
   font-size: 3.2rem;
   font-weight: 800;
   margin: 0 0 15px 0;
@@ -546,7 +546,7 @@ footer p {
 }
 
 .meta-info {
-  color: #f3edf1;
+  color: #1f1e1f;
   font-size: 0.9rem;
   margin-bottom: 25px;
   font-weight: 500;
