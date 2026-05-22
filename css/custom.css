@@ -516,7 +516,7 @@ footer p {
 }
 
 /* ===== RESPONSIVE FIXES ===== */
-@media (max-width: 768px) {
+@media (max-width: 500px) {
   #name {
     margin-top: 4rem;
   }
@@ -1174,20 +1174,4 @@ footer p {
     font-size: 0.75rem;
     line-height: 1.5;
   }
-}
-input[type="submit"] {
-  padding: 10px 25px;
-  font-size: 14px;
-  background-color: #3498db;
-  color: white;
-  border: none;
-  border-radius: 50px; /* Capsule shape */
-  cursor: pointer;
-  width: auto;
-  display: inline-block;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-input[type="submit"]:hover {
-  background-color: #2980b9;
 }
