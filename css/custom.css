@@ -1185,3 +1185,6 @@ button[type="submit"] {
   display: inline-block !important;
   cursor: pointer;
 }
+selector {
+  background-color: transparent;
+}
