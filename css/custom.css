@@ -1175,8 +1175,8 @@ footer p {
     line-height: 1.5;
   }
 }
-input[type="submit"] {
-  padding: 6px 12px;
-  font-size: 13px;
-  width: 120px;
+button {
+  padding: 8px 16px;
+  font-size: 14px;
+  width: auto;
 }
