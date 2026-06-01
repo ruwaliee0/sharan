@@ -1188,3 +1188,10 @@ button[type="submit"] {
 selector {
   background-color: transparent;
 }
+footer .social-icons {
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 5px 0;
+}
