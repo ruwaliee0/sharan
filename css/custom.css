@@ -843,7 +843,7 @@ footer p {
 }
 
 .portfolio-right::-webkit-scrollbar-track {
-  background: rgba(217, 70, 166, 0.1);
+  background: rgba(10, 10, 10, 0.1);
 }
 
 .portfolio-right::-webkit-scrollbar-thumb {
