@@ -1188,14 +1188,3 @@ button[type="submit"] {
 selector {
   background-color: transparent;
 }
-footer {
-    background: #071633;
-    padding: 15px 0;
-}
-.social-icons{
-    margin-bottom: 3px;
-}
-
-.contact-info p{
-    margin: 2px 0;
-}
