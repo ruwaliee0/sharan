@@ -1188,3 +1188,9 @@ button[type="submit"] {
 selector {
   background-color: transparent;
 }
+#skill h1{
+    font-size: 45px;
+    text-align: left;
+    margin-top: 30px;
+    margin-left: 50px;
+}
