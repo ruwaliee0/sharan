@@ -1292,3 +1292,59 @@ selector {
 .card-5 .skill-icon {
   color: #FFEDD5;
 }
+/* Skills Section Background */
+.skills-section {
+    padding: 40px 20px;
+    background-color: #f8f9fa; /* Halka gray background */
+    display: flex;
+    justify-content: center;
+}
+
+/* 2 Column Grid for Mobile */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Mobile ma 2 columns */
+    gap: 20px;
+    width: 100%;
+    max-width: 500px; /* Thulo screen ma dherai thulo nahos bhanera */
+}
+
+/* Individual Skill Card */
+.skill-card {
+    background: #ffffff;
+    border-radius: 25px; /* Thulo rounded corners */
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); /* Soft shadow */
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px); /* Hover garda halka mathi uthcha */
+}
+
+/* Icon Styling */
+.skill-card i {
+    font-size: 45px;
+    color: #333; /* Dark gray icon */
+    margin-bottom: 15px;
+}
+
+/* Text Styling */
+.skill-card span {
+    font-size: 1rem;
+    font-weight: 700; /* Bold text */
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Responsive: Desktop ma 4 column banauna maan bhaye */
+@media (min-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 900px;
+    }
+}
