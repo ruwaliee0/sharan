@@ -1194,3 +1194,101 @@ selector {
     margin-top: 30px;
     margin-left: 50px;
 }
+.skills-section {
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+}
+
+.skills-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Base Skill Card */
+.skill-card {
+  padding: 40px 30px;
+  border-radius: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.skill-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.skill-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Individual Card Colors (mathi ko jastai) */
+
+/* Purple/Blue Card */
+.card-1 {
+  background: linear-gradient(135deg, #6B46C1 0%, #8B5CF6 100%);
+  color: white;
+}
+
+.card-1 .skill-icon {
+  color: #FED7AA;
+}
+
+/* Purple/Pink Card */
+.card-2 {
+  background: linear-gradient(135deg, #EC4899 0%, #F472B6 100%);
+  color: white;
+}
+
+.card-2 .skill-icon {
+  color: #FECDD3;
+}
+
+/* Blue Card */
+.card-3 {
+  background: linear-gradient(135deg, #3B82F6 0%, #60A5FA 100%);
+  color: white;
+}
+
+.card-3 .skill-icon {
+  color: #DBEAFE;
+}
+
+/* Green Card */
+.card-4 {
+  background: linear-gradient(135deg, #10B981 0%, #34D399 100%);
+  color: white;
+}
+
+.card-4 .skill-icon {
+  color: #D1FAE5;
+}
+
+/* Orange Card */
+.card-5 {
+  background: linear-gradient(135deg, #F97316 0%, #FB923C 100%);
+  color: white;
+}
+
+.card-5 .skill-icon {
+  color: #FFEDD5;
+}
