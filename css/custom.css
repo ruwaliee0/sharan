@@ -1374,3 +1374,45 @@ selector {
   width: 100% !important;
   margin: 0 auto !important;
 }
+/* =========================================
+   MOBILE OPTIMIZATION (Phone ko lagi)
+========================================= */
+@media (max-width: 575px) {
+  
+  /* 1. Skill Heading sano banaune */
+  .skill-label {
+    font-size: 1.3rem !important; /* Thulo bata sano banayeko */
+    margin-bottom: 15px !important;
+    letter-spacing: 0px !important;
+  }
+
+  /* 2. Grid ko gap milaune */
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns nai rakhne */
+    gap: 12px !important; /* Cards bich ko gap sano banayeko */
+    padding: 0 15px !important;
+    margin-top: 20px !important;
+  }
+
+  /* 3. Skill Card sano banaune */
+  .skill-card {
+    min-height: 110px !important; /* Card ko height ghatayeko */
+    padding: 12px 8px !important;  /* Bhitrak ko space ghatayeko */
+    border-radius: 12px !important; /* Corner halka round matra rakheko */
+    background: #f3f4f6 !important; /* Screenshot ma gray jastai background */
+  }
+
+  /* 4. Card bhitra ko Icon sano banaune */
+  .skill-card .skill-icon, 
+  .skill-card i {
+    font-size: 1.8rem !important; /* Icon thulo bata sano banayeko */
+    margin-bottom: 8px !important;
+  }
+
+  /* 5. Card bhitra ko Text (HTML, CSS) sano banaune */
+  .skill-card h3 {
+    font-size: 0.85rem !important; /* Text sano banayeko */
+    font-weight: 700 !important;
+    text-transform: uppercase;
+  }
+}
