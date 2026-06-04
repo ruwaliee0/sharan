@@ -6,7 +6,7 @@ html, body {
   padding: 0;
   font-family: "Arvo", serif;
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  position: relative;  /* ✅ overflow-x: hidden hatayeko */
 }
 
 /* ===== NAVIGATION ===== */
@@ -69,14 +69,12 @@ html, body {
 }
 
 /* ===== MINIMAL RESUME STYLING ===== */
-
 #resume-section {
-    background-color: #ffffff; /* White background matching your site */
-    font-family: 'Poppins', sans-serif; /* Use your site's default font */
+    background-color: #ffffff;
+    font-family: 'Poppins', sans-serif;
     color: #333;
 }
 
-/* Big, Bold, Lowercase Title like "about me" */
 .section-title {
     font-size: 3.5rem;
     font-weight: 900;
@@ -90,13 +88,12 @@ html, body {
     font-weight: 700;
     color: #222;
     margin-bottom: 25px;
-    text-transform: lowercase; /* Matching the theme */
+    text-transform: lowercase;
     letter-spacing: -0.5px;
 }
 
-/* Soft Gray Cards like "my ervices" */
 .minimal-card {
-    background-color: #f3f4f6; /* Soft light gray */
+    background-color: #f3f4f6;
     border-radius: 16px;
     padding: 30px;
     margin-bottom: 20px;
@@ -133,7 +130,6 @@ html, body {
     margin: 0;
 }
 
-/* Skills Section */
 .skill-title {
     font-size: 1rem;
     font-weight: 600;
@@ -157,9 +153,8 @@ html, body {
     border: 1px solid #e5e7eb;
 }
 
-/* Gradient Card matching your left profile picture */
 .gradient-promo-card {
-    background: linear-gradient(135deg, #a770ef 0%, #cf8bf3 50%, #fdb99b 100%); /* Matching Purple/Pink Gradient */
+    background: linear-gradient(135deg, #a770ef 0%, #cf8bf3 50%, #fdb99b 100%);
     border-radius: 16px;
     padding: 35px 30px;
     color: #fff;
@@ -180,10 +175,7 @@ html, body {
     line-height: 1.6;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .section-title { font-size: 2.8rem; }
-}
+/* ===== RESUME SECTION ===== */
 #resume {
     padding: 55px 0;
     background: #fff;
@@ -197,7 +189,6 @@ html, body {
 }
 
 /* ===== BOOST TRAP CARD ANIMATION ===== */
-
 .boost-trap-card {
     position: relative;
     height: 400px;
@@ -207,7 +198,6 @@ html, body {
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* Background Layer with Animation */
 .card-background {
     position: absolute;
     top: 0;
@@ -220,7 +210,6 @@ html, body {
     z-index: 0;
 }
 
-/* Content Layer */
 .card-content {
     position: absolute;
     top: 0;
@@ -240,7 +229,6 @@ html, body {
     z-index: 1;
 }
 
-/* Icon Container */
 .icon-container {
     width: 80px;
     height: 80px;
@@ -257,19 +245,10 @@ html, body {
     z-index: 2;
 }
 
-.icon-container.python {
-    color: #3776ab;
-}
+.icon-container.python { color: #3776ab; }
+.icon-container.js { color: #f7df1e; }
+.icon-container.web { color: #ff6b6b; }
 
-.icon-container.js {
-    color: #f7df1e;
-}
-
-.icon-container.web {
-    color: #ff6b6b;
-}
-
-/* Title */
 .card-content h5 {
     font-size: 1.3rem;
     font-weight: 800;
@@ -280,7 +259,6 @@ html, body {
     z-index: 2;
 }
 
-/* Description */
 .card-content p {
     font-size: 0.9rem;
     color: #666;
@@ -291,7 +269,6 @@ html, body {
     z-index: 2;
 }
 
-/* Footer Badge */
 .card-footer {
     position: relative;
     z-index: 2;
@@ -300,7 +277,7 @@ html, body {
 .badge {
     display: inline-block;
     background: #f3f4f6;
-    color:  rgba(1, 6, 27, 0.3);
+    color: #6366f1;
     padding: 8px 16px;
     border-radius: 20px;
     font-size: 0.85rem;
@@ -308,8 +285,7 @@ html, body {
     transition: all 0.5s ease;
 }
 
-/* ===== HOVER ANIMATION (The Boost Trap Effect) ===== */
-
+/* Hover Effects */
 .boost-trap-card:hover {
     transform: scale(1.05) rotateY(5deg);
 }
@@ -348,69 +324,26 @@ html, body {
     transform: translateY(5px);
 }
 
-/* ===== BOOST TRAP ANIMATION KEYFRAMES ===== */
-
+/* ===== BOOST TRAP KEYFRAMES ===== */
 @keyframes boostTrap {
     0% {
         opacity: 0;
-        clip-path: polygon(
-            0% 0%, 0% 0%, 0% 0%,
-            100% 0%, 100% 0%, 100% 0%,
-            100% 100%, 100% 100%,
-            0% 100%, 0% 100%
-        );
+        clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 100%);
     }
     25% {
-        clip-path: polygon(
-            0% 0%, 25% 0%, 50% 0%,
-            100% 0%, 100% 25%, 100% 50%,
-            100% 100%, 75% 100%,
-            50% 100%, 0% 100%
-        );
+        clip-path: polygon(0% 0%, 25% 0%, 50% 0%, 100% 0%, 100% 25%, 100% 50%, 100% 100%, 75% 100%, 50% 100%, 0% 100%);
     }
     50% {
-        clip-path: polygon(
-            0% 0%, 50% 0%, 100% 0%,
-            100% 0%, 100% 50%, 100% 100%,
-            100% 100%, 50% 100%,
-            0% 100%, 0% 50%
-        );
+        clip-path: polygon(0% 0%, 50% 0%, 100% 0%, 100% 0%, 100% 50%, 100% 100%, 100% 100%, 50% 100%, 0% 100%, 0% 50%);
     }
     75% {
-        clip-path: polygon(
-            0% 0%, 100% 0%, 100% 0%,
-            100% 25%, 100% 75%, 100% 100%,
-            75% 100%, 25% 100%,
-            0% 75%, 0% 25%
-        );
+        clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 100% 25%, 100% 75%, 100% 100%, 75% 100%, 25% 100%, 0% 75%, 0% 25%);
     }
     100% {
         opacity: 1;
-        clip-path: polygon(
-            0% 0%, 100% 0%, 100% 0%,
-            100% 0%, 100% 100%, 100% 100%,
-            100% 100%, 0% 100%,
-            0% 100%, 0% 0%
-        );
+        clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 100%, 0% 100%, 0% 100%, 0% 0%);
     }
 }
-
-/* ===== RESPONSIVE ===== */
-
-@media (max-width: 768px) {
-    #resume .title {
-        font-size: 2rem;
-    }
-    
-    .boost-trap-card {
-        height: 350px;
-    }
-    
-    .card-content {
-        padding: 25px 20px;
-    }
-}
-
 
 /* ===== PORTFOLIO ===== */
 #portfolio {
@@ -419,7 +352,7 @@ html, body {
 }
 #portfolio .card img {
   width: 100%;
-  height: 120px; /* Reduced image height for smaller cards */
+  height: 120px;
   object-fit: cover;
 }
 
@@ -515,72 +448,8 @@ footer p {
   transform: scale(1.1);
 }
 
-/* ===== RESPONSIVE FIXES ===== */
-@media (max-width: 500px) {
-  #name {
-    margin-top: 4rem;
-  }
-  #home {
-    min-height: 80vh;
-  }
-  .social-icons {
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-  /* Adjusting card content for smaller screens to prevent overflow */
-  .card-title {
-      font-size: 1rem;
-  }
-  .card-text {
-      font-size: 0.8rem;
-  }
-  .badge {
-      font-size: 0.7rem;
-  }
-}
 /* =========================================
-   ✅ NAVBAR (मोबाइलमा Logo माथि, Menu तल)
-========================================= */
-.nav-logo {
-  width: 30px;
-  height: 24px;
-  object-fit: contain;
-}
-
-.nav-brand-text {
-  font-size: 1.6rem;
-  font-weight: 700;
-}
-
-.custom-nav-link {
-  font-size: 1.1rem;
-  padding: 0.5rem 0.6rem !important;
-  white-space: nowrap; 
-  transition: color 0.2s ease;
-  font-weight: 500;
-}
-
-.custom-nav-link:hover {
-  color: #0d6efd !important; /* निलो रङ आउँछ Hover गर्दा */
-}
-
-/* ===== मोबाइलमा (Screen सानो हुँदा) ===== */
-@media (max-width: 575px) {
-  .nav-logo {
-    width: 26px;
-    height: 20px;
-  }
-  .nav-brand-text {
-    font-size: 1.4rem;
-  }
-  .custom-nav-link {
-    /* मेनु तल सरेकोले अब अलि ठूलै राख्न मिल्छ */
-    font-size: 0.95rem !important; 
-    padding: 0.2rem 0.4rem !important;
-  }
-}
-/* =========================================
-   ✅ NAVBAR WITH SMOOTH ANIMATIONS
+   ✅ NAVBAR WITH ANIMATIONS (Single Version)
 ========================================= */
 .nav-logo {
   width: 30px;
@@ -594,7 +463,6 @@ footer p {
   font-weight: 700;
 }
 
-/* ✅ Navbar Slide-Down Animation */
 @keyframes slideDown {
   0% {
     transform: translateY(-100%);
@@ -606,21 +474,16 @@ footer p {
   }
 }
 
-.navbar {
+/* ✅ Custom class used to avoid Bootstrap conflict */
+.custom-navbar {
   animation: slideDown 0.6s ease;
 }
 
-/* ✅ Logo Bounce Animation */
 @keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-4px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
 }
 
-/* ✅ Nav Links with Smooth Hover */
 .custom-nav-link {
   font-size: 1.1rem;
   padding: 0.5rem 0.8rem !important;
@@ -633,37 +496,21 @@ footer p {
 }
 
 .custom-nav-link:hover {
-  color:  rgba(1, 6, 27, 0.3); !important;
+  color: #0d6efd !important;
   border-bottom: 2px solid #0d6efd;
   background-color: rgba(13, 110, 253, 0.08);
   transform: translateY(-2px);
 }
 
-/* ✅ Active Link */
 .custom-nav-link.active {
-  color:  rgba(1, 6, 27, 0.3);
+  color: #0d6efd;
   font-weight: 600;
-  border-bottom: 2px solid  rgba(1, 6, 27, 0.3);
+  border-bottom: 2px solid #0d6efd;
 }
 
-/* ===== मोबाइलमा (Screen सानो हुँदा) ===== */
-@media (max-width: 575px) {
-  .nav-logo {
-    width: 26px;
-    height: 20px;
-  }
-  .nav-brand-text {
-    font-size: 1.4rem;
-  }
-  .custom-nav-link {
-    font-size: 0.95rem !important;
-    padding: 0.2rem 0.4rem !important;
-  }
-}
 /* =========================================
    MODERN PORTFOLIO DESIGN
 ========================================= */
-
 .modern-portfolio-section {
   width: 100%;
   min-height: 100vh;
@@ -675,7 +522,7 @@ footer p {
   font-family: 'Poppins', sans-serif;
 }
 
-/* ========== SIDEBAR ========== */
+/* Sidebar */
 .portfolio-sidebar {
   width: 100px;
   background: linear-gradient(180deg, #19082f 0%, #4e396d 50%, #1a8124 100%);
@@ -714,13 +561,13 @@ footer p {
 
 .sidebar-icon-btn:hover {
   background: #fff;
-  color:  rgba(1, 6, 27, 0.3);
+  color: #1125a7;
   transform: scale(1.15) rotate(10deg);
   box-shadow: 0 10px 30px rgba(255, 255, 255, 0.4);
   border-color: #fff;
 }
 
-/* ========== LEFT: PROFILE SECTION ========== */
+/* Left Profile */
 .portfolio-left {
   width: 35%;
   display: flex;
@@ -759,19 +606,13 @@ footer p {
   transform: scale(1.1);
 }
 
-/* OVERLAY GRADIENT */
 .profile-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    135deg,
-    rgba(26, 26, 26, 0.8) 0%,
-    rgba(54, 11, 106, 0.6) 40%,
-    transparent 100%
-  );
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(54, 11, 106, 0.6) 40%, transparent 100%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -828,7 +669,7 @@ footer p {
   border-color: #fff;
 }
 
-/* ========== RIGHT: CONTENT SECTION ========== */
+/* Right Content */
 .portfolio-right {
   flex: 1;
   padding: 80px 60px;
@@ -837,7 +678,6 @@ footer p {
   max-height: 100vh;
 }
 
-/* Scrollbar styling */
 .portfolio-right::-webkit-scrollbar {
   width: 8px;
 }
@@ -859,29 +699,6 @@ footer p {
   margin-bottom: 70px;
 }
 
-.section-title {
-  font-family: 'Poppins', sans-serif;
-  color: #1e1d1d;
-  font-size: 3.2rem;
-  font-weight: 800;
-  margin: 0 0 15px 0;
-  text-transform: lowercase;
-  letter-spacing: -1px;
-}
-
-.meta-info {
-  color: #1f1e1f;
-  font-size: 0.9rem;
-  margin-bottom: 25px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-}
-
-.separator {
-  margin: 0 8px;
-  opacity: 0.6;
-}
-
 .section-description {
   font-family: 'Poppins', sans-serif;
   line-height: 1.85;
@@ -891,7 +708,7 @@ footer p {
   font-weight: 400;
 }
 
-/* ========== SERVICES GRID ========== */
+/* Services Grid */
 .services-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -940,15 +757,28 @@ footer p {
   font-family: 'Poppins', sans-serif;
   font-size: 0.85rem;
   line-height: 1.65;
-  color:
+  color: rgba(255, 255, 255, 0.8); /* ✅ Fixed missing color */
   margin: 0;
   font-weight: 400;
 }
 
-/* =========================================
-   RESPONSIVE DESIGN
-========================================= */
+/* ===== META INFO ===== */
+.meta-info {
+  color: #1f1e1f;
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
 
+.separator {
+  margin: 0 8px;
+  opacity: 0.6;
+}
+
+/* =========================================
+   RESPONSIVE (Merged)
+========================================= */
 @media (max-width: 1400px) {
   .portfolio-right {
     padding: 70px 45px;
@@ -1001,7 +831,60 @@ footer p {
     padding: 20px;
     position: static;
   }
+}
 
+@media (max-width: 768px) {
+  .section-title { font-size: 2.8rem; }
+  #resume .title { font-size: 2rem; }
+  
+  .boost-trap-card {
+    height: 350px;
+  }
+  
+  .card-content {
+    padding: 25px 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  .nav-logo {
+    width: 26px;
+    height: 20px;
+  }
+  .nav-brand-text {
+    font-size: 1.4rem;
+  }
+  .custom-nav-link {
+    font-size: 0.95rem !important;
+    padding: 0.2rem 0.4rem !important;
+  }
+}
+
+@media (max-width: 500px) {
+  #name {
+    margin-top: 4rem;
+  }
+  #home {
+    min-height: 80vh;
+  }
+  .social-icons {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .card-title {
+    font-size: 1rem;
+  }
+  .card-text {
+    font-size: 0.8rem;
+  }
+  .badge {
+    font-size: 0.7rem;
+  }
+}
+/* =========================================
+   RESPONSIVE — max-width: 991px ✅ Added missing opening bracket
+========================================= */
+@media (max-width: 991px) {
   .sidebar-nav {
     flex-direction: row;
     gap: 15px;
@@ -1175,6 +1058,8 @@ footer p {
     line-height: 1.5;
   }
 }
+
+/* ===== SUBMIT BUTTON ===== */
 input[type="submit"],
 button[type="submit"] {
   padding: 10px 25px !important;
@@ -1185,62 +1070,124 @@ button[type="submit"] {
   display: inline-block !important;
   cursor: pointer;
 }
+
+/* ⚠️ 'selector' invalid — Commented out, replace with actual selector */
+/*
 selector {
   background-color: transparent;
 }
-#skill h1{
-    font-size: 45px;
-    text-align: left;
-    margin-top: 30px;
-    margin-left: 50px;
-}
-#skills{
-    padding: 80px 20px;
-    text-align: center;
-}
+*/
 
-#skills h2{
-    font-size: 3rem;
-    margin-bottom: 40px;
+/* ===== SKILL SECTION HEADING ===== */
+#skill h1 {
+  font-size: 45px;
+  text-align: left;
+  margin-top: 30px;
+  margin-left: 50px;
 }
 
-.skills-container{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 25px;
+/* ===== SKILLS SECTION ===== */
+#skills {
+  padding: 80px 20px;
+  text-align: center;
 }
 
-.skill-card{
-    width: 220px;
-    height: 220px;
-    background: #fff;
-    border: 1px solid #e5e5e5;
-    border-radius: 25px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    transition: 0.4s ease;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+#skills h2 {
+  font-size: 3rem;
+  margin-bottom: 40px;
 }
 
-.skill-card:hover{
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+/* Flex Layout */
+.skills-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
 }
 
-.skill-card i{
-    font-size: 60px;
-    color: #666;
-    margin-bottom: 20px;
+/* Grid Layout */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 40px auto;
 }
 
-.skill-card h3{
-    font-size: 1.5rem;
-    margin: 0;
+/* ===== SKILL CARD ✅ Merged duplicate definitions ===== */
+.skill-card {
+  background: rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  padding: 20px;                        /* ✅ Fixed: was 0px 20px */
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+  color: white;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
+  transform: translateY(-4px);
+}
+
+.skill-card i {
+  font-size: 60px;
+  color: #e2e8f0;                       /* ✅ Updated for dark bg visibility */
+  margin-bottom: 20px;
+}
+
+.skill-card .skill-icon {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  color: #e2e8f0;
+}
+
+.skill-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  color: white;
+}
+
+/* ===== CONTACT HEADING ===== */
+.contact-heading {
+  text-align: center !important;
+  width: 100% !important;
+  margin: 20px auto !important;
+  font-weight: 700 !important;
+}
+
+/* ===== SKILL LABEL ✅ Merged duplicate definitions — kept complete version ===== */
+.skill-label {
+  font-weight: 700 !important;
+  font-size: 2rem !important;
+  letter-spacing: 0.5px !important;
+  text-align: center !important;
+  display: block !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+}
+
+/* ===== RESPONSIVE (Merged) ===== */
+@media (min-width: 992px) {
+  .contact-heading {
+    font-size: 2rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-heading {
+    font-size: 2rem !important;
+  }
+  .skill-label {
+    font-size: 1rem !important;
+  }
 }
 
 @media (max-width: 575px) {
@@ -1263,114 +1210,20 @@ selector {
     min-height: 120px;
     padding: 15px 8px;
   }
+
+  .contact-heading {
+    font-size: 1rem !important;
+    margin: 15px auto !important;
+  }
+
+  .skill-label {
+    font-size: 0.95rem !important;
+  }
 }
+
 @media (max-width: 400px) {
   .skills-grid {
     padding: 0 18px;
     max-width: 320px;
   }
-}
-
-/* Skills Grid */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 30px;
-  max-width: 1000px;
-  margin: 40px auto;
-}
-
-/* Dark Background Card (Database Card Jastai) */
-.skill-card {
-  background: rgba(0, 0, 0, 0.12); /* Dark navy/black background */
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 12px;
-  padding: 0px 20px;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
-  transition: all 0.3s ease;
-  color: white; /* White text for contrast */
-  min-height: 180px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.skill-card:hover {
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
-  transform: translateY(-4px);
-}
-
-/* Icon Colors (Bright for dark background) */
-.skill-card .skill-icon {
-  font-size: 2.8rem;
-  margin-bottom: 15px;
-  color: #e2e8f0; /* Light gray/white icon */
-}
-
-.skill-card h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin: 0;
-  color: white; /* White text */
-}
-
-/* ✅ Say Hi to Me - Center ra Sano */
-.contact-heading {
-    text-align: center !important;   /* Text lai horizontal center garcha */
-    width: 100% !important;         /* Full width lincha center huna ko lagi */
-    margin: 20px auto !important;   /* Mathi-tala gap ra left-right auto auto */
-    font-weight: 700 !important;
-}
-
-/* Desktop (Thulo Screen) */
-@media (min-width: 992px) {
-    .contact-heading {
-        font-size: 2rem !important; 
-    }
-}
-
-/* Tablet */
-@media (max-width: 768px) {
-    .contact-heading {
-        font-size: 2rem !important;
-    }
-}
-
-/* Phone (Sano Screen) */
-@media (max-width: 575px) {
-    .contact-heading {
-        font-size: 1rem !important;
-        margin: 15px auto !important;
-    }
-}
-/* ✅ Skill |learner| - Bold ra Thulo */
-.skill-label {
-    font-weight: 700 !important;      /* Bold banaucha */
-    font-size: 1.1rem !important;     /* Halka thulo banaucha */
-    letter-spacing: 0.5px !important; /* Letter spacing add garcha */
-}
-
-/* Tablet ma */
-@media (max-width: 768px) {
-    .skill-label {
-        font-size: 1rem !important;
-    }
-}
-
-/* Phone ma */
-@media (max-width: 575px) {
-    .skill-label {
-        font-size: 0.95rem !important;
-    }
-}
-.skill-label {
-  font-weight: 700 !important;
-  font-size: 2rem !important;
-  letter-spacing: 0.5px !important;
-  text-align: center !important;
-  display: block !important;
-  width: 100% !important;
-  margin: 0 auto !important;
 }
