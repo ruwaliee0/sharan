@@ -1245,7 +1245,7 @@ selector {
   }
 
   .skill-card {
-    background: #ffffff;
+    background: rgba(1, 6, 27, 0.3);
     border: none;
     border-radius: 18px;
     padding: 10px 7px 12px;     /* ← padding ghatayera card sano */
