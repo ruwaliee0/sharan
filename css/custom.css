@@ -1422,3 +1422,25 @@ selector {
     text-align: center;
   }
 }
+@media (max-width: 575px) {
+  
+  .skill-card {
+    padding: 14px 10px 12px;      /* ← padding ghatāyo */
+    min-height: 105px;            /* ← height ghatāyo */
+    border-radius: 16px;
+  }
+
+  .skill-card .skill-icon,
+  .skill-card i {
+    font-size: 1.75rem;           /* ← icon sano */
+    margin-bottom: 7px;
+  }
+
+  .skill-card h3 {
+    font-size: 0.82rem;           /* ← text sano */
+  }
+
+  .skills-grid {
+    gap: 10px;                    /* ← cards bich ko gap sano */
+  }
+}
