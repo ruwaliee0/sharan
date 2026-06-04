@@ -1227,4 +1227,48 @@ selector {
     max-width: 320px;
   }
 }
+@media (max-width: 575px) {
+  
+  .skill-label {
+    font-size: 1.4rem !important;
+    margin-bottom: 22px !important;
+    text-align: center !important;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 0 30px;             /* ← left-right padding badhayera cards center + sano */
+    max-width: 400px;            /* ← grid width limit garera sano banayo */
+    margin: 0 auto !important;   /* ← grid center ma lyaune */
+  }
+
+  .skill-card {
+    background: #ffffff;
+    border: none;
+    border-radius: 18px;
+    padding: 18px 10px 16px;     /* ← padding ghatayera card sano */
+    min-height: 110px;           /* ← height ghatayera sano */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .skill-card .skill-icon,
+  .skill-card i {
+    font-size: 2rem;             /* ← icon sano */
+    margin-bottom: 8px;
+    color: #555555;
+  }
+
+  .skill-card h3 {
+    font-size: 0.85rem;          /* ← text sano */
+    font-weight: 600;
+    color: #333333;
+    margin: 0;
+  }
+}
 
