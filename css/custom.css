@@ -1248,7 +1248,7 @@ selector {
     background: #ffffff;
     border: none;
     border-radius: 18px;
-    padding: 18px 10px 16px;     /* ← padding ghatayera card sano */
+    padding: 10px 7px 12px;     /* ← padding ghatayera card sano */
     min-height: 110px;           /* ← height ghatayera sano */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     display: flex;
