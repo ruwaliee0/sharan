@@ -1391,7 +1391,7 @@ selector {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
     padding: 0 30px;             /* ← left-right padding badhayera cards center + sano */
-    max-width: 400px;            /* ← grid width limit garera sano banayo */
+    max-width: 250px;            /* ← grid width limit garera sano banayo */
     margin: 0 auto !important;   /* ← grid center ma lyaune */
   }
 
