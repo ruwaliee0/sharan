@@ -1422,3 +1422,27 @@ selector {
     margin: 0;
   }
 }
+/* Mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .skill-card {
+    height: 120px;  /* ya jati height chahinchha */
+    padding: 12px 10px;
+  }
+}
+
+/* Small mobile (max-width: 576px) */
+@media (max-width: 576px) {
+  .skill-card {
+    height: 100px;  /* jhan sano */
+    padding: 8px 10px;
+  }
+
+  .skill-card img,
+  .skill-card i {
+    font-size: 24px;  /* icon pani sano garne */
+  }
+
+  .skill-card .card-title {
+    font-size: 13px;  /* title pani sano */
+  }
+}
