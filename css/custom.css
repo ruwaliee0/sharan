@@ -1391,7 +1391,7 @@ selector {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
     padding: 0 30px;             /* ← left-right padding badhayera cards center + sano */
-    max-width: 250px;            /* ← grid width limit garera sano banayo */
+    max-width: 400px;            /* ← grid width limit garera sano banayo */
     margin: 0 auto !important;   /* ← grid center ma lyaune */
   }
 
@@ -1400,8 +1400,8 @@ selector {
     border: none;
     border-radius: 13px;
     padding: 13px 7px 13px;     /* ← padding ghatayera card sano */
-    min-height: 45px;           /* ← height ghatayera sano */
-    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.06);
+    min-height: 90px;           /* ← height ghatayera sano */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1420,5 +1420,29 @@ selector {
     font-weight: 600;
     color: #333333;
     margin: 0;
+  }
+}
+/* Mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .skill-card {
+    height: 120px;  /* ya jati height chahinchha */
+    padding: 12px 10px;
+  }
+}
+
+/* Small mobile (max-width: 576px) */
+@media (max-width: 576px) {
+  .skill-card {
+    height: 100px;  /* jhan sano */
+    padding: 8px 10px;
+  }
+
+  .skill-card img,
+  .skill-card i {
+    font-size: 24px;  /* icon pani sano garne */
+  }
+
+  .skill-card .card-title {
+    font-size: 13px;  /* title pani sano */
   }
 }
