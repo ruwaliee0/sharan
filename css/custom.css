@@ -1400,8 +1400,8 @@ selector {
     border: none;
     border-radius: 13px;
     padding: 13px 7px 13px;     /* ← padding ghatayera card sano */
-    min-height: 90px;           /* ← height ghatayera sano */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    min-height: 45px;           /* ← height ghatayera sano */
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.06);
     display: flex;
     flex-direction: column;
     justify-content: center;
